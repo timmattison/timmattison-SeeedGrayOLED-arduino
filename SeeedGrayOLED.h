@@ -24,7 +24,7 @@
 
 // SeeedGrayOLED Instruction set addresses
 
-#include <WProgram.h>
+#include <Arduino.h>
 #include "Wire.h"
 
 #define VERTICAL_MODE			01
