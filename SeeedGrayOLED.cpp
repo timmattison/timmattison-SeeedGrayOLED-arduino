@@ -183,8 +183,8 @@ void SeeedGrayOLED::init(void)
 void SeeedGrayOLED::sendCommand(unsigned char command)
 {
     Wire.beginTransmission(SeeedGrayOLED_Address); // begin I2C communication
-    Wire.send(SeeedGrayOLED_Command_Mode);	   // Set OLED Command mode
-    Wire.send(command);
+    Wire.write(SeeedGrayOLED_Command_Mode);	   // Set OLED Command mode
+    Wire.write(command);
     Wire.endTransmission();    		           // End I2C communication
 }
 
@@ -244,8 +244,8 @@ void SeeedGrayOLED::clearDisplay()
 void SeeedGrayOLED::sendData(unsigned char Data)
 {
     Wire.beginTransmission(SeeedGrayOLED_Address); // begin I2C transmission
-    Wire.send(SeeedGrayOLED_Data_Mode);            // data mode
-    Wire.send(Data);
+    Wire.write(SeeedGrayOLED_Data_Mode);            // data mode
+    Wire.write(Data);
     Wire.endTransmission();                    // stop I2C transmission
 }
 
